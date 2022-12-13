@@ -18,18 +18,21 @@ let daysToMars: number = (hoursToMars / 24);
 
 console.log(`${spacecraftName} has ${daysToMars} days until the next Mars landing.`);
 
-// Code an output statement here (use a template literal):
-
-
-
 // Part 3: Create a Function ("getDaysToLocation")
 
-
+function getDaysToLocation(kilometersAway: number): number {
+   
+    let milesAway: number = (kilometersAway * milesPerKilometer);
+    let hoursToLocation: number = (milesAway / speedMph);
+    let daysTilArrival: number = (hoursToLocation / 24);
+    return daysTilArrival;
+}
 
 // Move your output statement from part 2 here. Update the template literal to call
 // the function and print the outputs for a Mars trip and a moon trip.
 
-
+console.log(`${spacecraftName} has ${getDaysToLocation(kilometersToMars)} days until the next Mars landing.`);
+console.log(`${spacecraftName} has ${getDaysToLocation(kilometersToTheMoon)} days until the next Moon landing.`);
 
 
 // Part 4: Create a Spacecraft Class
